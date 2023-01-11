@@ -1,5 +1,5 @@
 import { Selector } from 'testcafe';
-import { assertLabels, assertPageHeader } from './helper.js';
+import { assertLabels, assertPageHeader } from './helpers/helper.js';
 import page from './pagemodels/text-box-page-model';
 
 fixture`Text Boxes`

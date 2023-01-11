@@ -1,5 +1,5 @@
 import { Selector } from 'testcafe';
-import { assertPageHeader } from './helper';
+import { assertPageHeader } from './helpers/helper';
 import page from './pagemodels/check-box-page-model';
 
 fixture`Check Boxes`
