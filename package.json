@@ -3,6 +3,7 @@
     "testcafe": "^2.2.0"
   },
   "scripts": {
-    "test1": "testcafe chrome tests/demoqa/textBoxes.js"
+    "textBoxes": "testcafe chrome tests/demoqa/textBoxes.js",
+    "checkBoxes": "testcafe chrome tests/demoqa/checkBoxes.js"
   }
 }

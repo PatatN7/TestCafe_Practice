@@ -1,5 +1,5 @@
 import { Selector } from 'testcafe';
-import { assertLabels } from './helper.js';
+import { assertLabels, assertPageHeader } from './helper.js';
 import page from './pagemodels/text-box-page-model';
 
 fixture`Text Boxes`
@@ -9,9 +9,7 @@ test('Assert Text Box Page and Labels', async t =>
 {
     await page.navigate();
 
-    const header = Selector('.main-header').innerText;
-
-    await t.expect(header).eql('Text Box', 'Page header does not match');
+    await assertPageHeader('Text Box');
         
     await assertLabels(page.labeList);
 
