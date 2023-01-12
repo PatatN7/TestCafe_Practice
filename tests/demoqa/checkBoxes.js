@@ -40,3 +40,49 @@ test('Expand and Collapse all Tree Nodes', async t =>
             .expect(page.collapseNode.exists).notOk('Not all Nodes collapsed');
 
 }).skipJsErrors(true);
+
+test('Check checked VS results', async t =>
+{
+    await page.navigate();
+
+    await t.click(page.expandAll);
+
+    const checkBoxCount = await page.checkBox.count;
+
+    for(let i = 0; i < checkBoxCount; i++)
+    {
+        await t.click(page.unchecked.nth(i));
+
+        let names = [];
+
+       for(let x = 0; x < checkBoxCount; x++)
+        {
+            if(await page.checkBox.nth(x).child('.rct-icon-check').exists)
+            {
+                let name = await page.name.nth(x).innerText;
+
+                if(name.includes(' ') || name.includes('.'))
+                {
+                    name = name.replace(/\s+/g, '');
+                    name = name.charAt(0).toLowerCase() + name.slice(1, name.indexOf('.'));
+                    names.push(name);
+                } else
+                {
+                    name = name.charAt(0).toLowerCase() + name.slice(1);
+                    names.push(name);
+                }
+            }
+        }
+
+        let result = 'You have selected :';
+
+        names.forEach(name => {
+            result = result + '\n' + name;
+        });
+
+        await t.expect((await page.result.innerText).toLowerCase).eql(result.toLowerCase, 'Selected checks not maching results');
+
+        await t.click(page.checked);
+    }
+
+}).skipJsErrors(true);
