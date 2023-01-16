@@ -5,8 +5,6 @@ export async function assertLabels(labels)
     
     const labelCount = await Selector('label').count;
 
-    console.log('**Asserting Labels**');
-
     if(labels.length == labelCount)
     {
         for (let i = 0; i < labelCount; i++)
@@ -22,7 +20,5 @@ export async function assertLabels(labels)
 
 export async function assertPageHeader(header)
 {
-    console.log('**Asserting Page Header**');
-
     await t.expect(Selector('.main-header').innerText).eql(header, 'Page header does not match');
 }

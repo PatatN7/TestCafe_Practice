@@ -4,6 +4,7 @@
   },
   "scripts": {
     "textBoxes": "testcafe chrome tests/demoqa/textBoxes.js",
-    "checkBoxes": "testcafe chrome tests/demoqa/checkBoxes.js"
+    "checkBoxes": "testcafe chrome tests/demoqa/checkBoxes.js",
+    "radioButtons": "testcafe chrome tests/demoqa/radioButtons.js"
   }
 }
