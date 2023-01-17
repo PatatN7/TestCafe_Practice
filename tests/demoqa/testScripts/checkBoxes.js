@@ -1,6 +1,6 @@
 import { Selector } from 'testcafe';
-import { assertPageHeader } from './helpers/helper';
-import page from './pagemodels/check-box-page-model';
+import { assertPageHeader } from '../helpers/helper';
+import page from '../pagemodels/check-box-page-model';
 
 fixture`Check Boxes`
     .page`https://demoqa.com/`;

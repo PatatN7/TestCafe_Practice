@@ -3,8 +3,9 @@
     "testcafe": "^2.2.0"
   },
   "scripts": {
-    "textBoxes": "testcafe chrome tests/demoqa/textBoxes.js",
-    "checkBoxes": "testcafe chrome tests/demoqa/checkBoxes.js",
-    "radioButtons": "testcafe chrome tests/demoqa/radioButtons.js"
+    "textBoxes": "testcafe chrome tests/demoqa/testScripts/textBoxes.js",
+    "checkBoxes": "testcafe chrome tests/demoqa/testScripts/checkBoxes.js",
+    "radioButtons": "testcafe chrome tests/demoqa/testScripts/radioButtons.js",
+    "webTables": "testcafe chrome tests/demoqa/testScripts/webTables.js"
   }
 }

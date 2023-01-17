@@ -6,7 +6,7 @@ class Page
     {
         this.elementsLink = Selector('.card').withText('Elements');
         this.textBoxLink = Selector('li').withText('Text Box');
-        this.labeList = ['Full Name', 'Email', 'Current Address', 'Permanent Address'];
+        this.labelList = ['Full Name', 'Email', 'Current Address', 'Permanent Address'];
         this.nameInput = Selector('#userName');
         this.emailInput = Selector('#userEmail');
         this.currentAddressInput = Selector('#currentAddress');

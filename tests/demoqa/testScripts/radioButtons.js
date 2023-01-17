@@ -1,6 +1,6 @@
 import { Selector } from 'testcafe';
-import { assertPageHeader } from './helpers/helper';
-import page from './pagemodels/radio-button-page-model.js';
+import { assertPageHeader } from '../helpers/helper';
+import page from '../pagemodels/radio-button-page-model.js';
 
 fixture`Radio Button`
     .page`https://demoqa.com/`;

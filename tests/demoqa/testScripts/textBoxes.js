@@ -1,6 +1,6 @@
 import { Selector } from 'testcafe';
-import { assertLabels, assertPageHeader } from './helpers/helper.js';
-import page from './pagemodels/text-box-page-model';
+import { assertLabels, assertPageHeader } from '../helpers/helper.js';
+import page from '../pagemodels/text-box-page-model';
 
 fixture`Text Boxes`
     .page`https://demoqa.com/`;
@@ -11,7 +11,7 @@ test('Assert Text Box Page and Labels', async t =>
 
     await assertPageHeader('Text Box');
         
-    await assertLabels(page.labeList);
+    await assertLabels(page.labelList);
 
 }).skipJsErrors(true);
 
