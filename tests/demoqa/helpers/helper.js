@@ -63,3 +63,39 @@ export async function assertModalLabels(labels)
         await t.expect(labels.length).eql(labelCount, 'The amount of labels provided does not match amount in page');
     }
 }
+
+//Assert Form Labels
+export async function assertFormLabels(labels)
+{
+    const labelCount = await Selector('.col-md-3.col-sm-12').count;
+
+    console.log(labelCount + ' ' + labels.length);
+
+    if(labels.length == labelCount)
+    {
+        for (let i = 0; i < labelCount; i++)
+        {
+            await t.expect(Selector('.col-md-3.col-sm-12').nth(i).innerText).eql(labels[i], 'Label ' + i + ' assertion fail');
+        }
+    } else
+    {
+        await t.expect(await labels.length).eql(labelCount, 'The amount of labels provided does not match amount in page');
+    }
+}
+
+//Assert Required Fields
+export async function assertRequiredFields(fields)
+{
+    const requiredCount = await Selector('[required]').count;
+    const fieldsCount = await fields.length;
+   
+    if(fieldsCount == requiredCount)
+    {
+        fields.forEach(async (element, index) => {
+            await t.expect(Selector('[required]').nth(index).id).eql(element, 'Provided Required field is not required');
+        });
+    } else
+    {
+        await t.expect(fieldsCount).eql(requiredCount, 'Required fields provided doesa not match number of required fields on page');
+    }
+}
