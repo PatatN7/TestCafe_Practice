@@ -7,6 +7,7 @@
     "textBoxes": "testcafe chrome tests/demoqa/testScripts/textBoxes.js",
     "checkBoxes": "testcafe chrome tests/demoqa/testScripts/checkBoxes.js",
     "radioButtons": "testcafe chrome tests/demoqa/testScripts/radioButtons.js",
-    "webTables": "testcafe chrome tests/demoqa/testScripts/webTables.js"
+    "webTables": "testcafe chrome tests/demoqa/testScripts/webTables.js",
+    "forms": "testcafe chrome tests/demoqa/testScripts/forms.js"
   }
 }
