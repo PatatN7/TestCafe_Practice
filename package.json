@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "testcafe": "^2.2.0"
+    "testcafe": "^2.2.0",
+    "testcafe-reporter-html": "^1.4.6"
   },
   "scripts": {
     "textBoxes": "testcafe chrome tests/demoqa/testScripts/textBoxes.js",
