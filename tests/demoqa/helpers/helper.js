@@ -69,8 +69,6 @@ export async function assertFormLabels(labels)
 {
     const labelCount = await Selector('.col-md-3.col-sm-12').count;
 
-    console.log(labelCount + ' ' + labels.length);
-
     if(labels.length == labelCount)
     {
         for (let i = 0; i < labelCount; i++)
